@@ -6,10 +6,12 @@ import ConfirmModal from "./ConfirmModal";
 import { useState, useEffect } from "react";
 
 export default function App() {
-  const [items, setItems] = useState(() => {
-    const saved = localStorage.getItem("items");
-    return saved ? JSON.parse(saved) : [];
-  });
+  // Sayfa açıldığında localStorage'ı temizle
+  useEffect(() => {
+    localStorage.removeItem("items");
+  }, []);
+
+  const [items, setItems] = useState([]);
 
   const [showConfirm, setShowConfirm] = useState(false);
 
