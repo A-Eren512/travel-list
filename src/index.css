@@ -99,6 +99,10 @@ body {
   font-size: 1rem;
 }
 
+.form-fields select:hover {
+  cursor: pointer;
+}
+
 .form-fields input:focus,
 .form-fields select:focus {
   outline: none;
@@ -218,7 +222,7 @@ body {
 
 /* Main content */
 .main-content {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
